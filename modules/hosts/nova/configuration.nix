@@ -29,6 +29,7 @@
 
         kernelPackages = pkgs.linuxPackages_latest;
       };
+      systemd.services.NetworkManager-wait-online.enable = false;
 
       users.users.kyle = {
         isNormalUser = true;
@@ -38,14 +39,31 @@
           "input"
           "audio"
           "network"
+          "docker"
         ];
       };
+
+      services.openssh.enable = true;
+
+      environment.systemPackages = with pkgs; [
+        vim
+      ];
+
+      environment.shells = [ "/etc/profiles/per-user/kyle/bin/zsh" ];
 
       zramSwap = {
         enable = true;
         algorithm = "zstd";
         memoryPercent = 50;
       };
+
+      nix.settings = {
+        experimental-features = [
+          "nix-command"
+          "flakes"
+        ];
+      };
+
     };
   };
 }
