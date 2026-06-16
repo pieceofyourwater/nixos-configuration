@@ -2,8 +2,6 @@
 {
   imports = [ inputs.disko.flakeModules.disko ];
 
-  flake.diskoConfigurations.default = self.diskoConfigurations.hostNova;
-
   flake.diskoConfigurations.hostNova = {
     disko.devices = {
       disk = {
