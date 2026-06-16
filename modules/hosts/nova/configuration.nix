@@ -13,9 +13,10 @@
         self.diskoConfigurations.hostNova
 
         self.nixosModules.home-manager
-        self.nixosModules.hardwareConfiguration
+        self.nixosModules.hardware-configuration
         self.nixosModules.desktop
         self.nixosModules.gaming
+        self.nixosModules.virtualization
         self.nixosModules.bluetooth
         self.nixosModules.stylix
         self.nixosModules.general
