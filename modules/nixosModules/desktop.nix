@@ -13,9 +13,8 @@
         enable = true;
         enableContribAndExtras = true;
       };
-
-      displayManager.ly.enable = true;
     };
+    services.displayManager.ly.enable = true;
 
     services.xserver.config = ''
       Section "InputClass"
