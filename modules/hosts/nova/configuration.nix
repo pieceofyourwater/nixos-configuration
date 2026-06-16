@@ -20,7 +20,6 @@
         self.nixosModules.stylix
         self.nixosModules.general
       ];
-      disko.devices = self.diskoConfigurations.hostNova;
 
       networking = {
         hostName = "nova";
