@@ -10,8 +10,6 @@
     nixosModules.hostNova = { pkgs, ... }: {
       imports = [
         self.nixosModules.hardware-configuration
-        self.diskoConfigurations.nova
-
         self.nixosModules.home-manager
         self.nixosModules.desktop
         self.nixosModules.gaming
@@ -19,6 +17,9 @@
         self.nixosModules.bluetooth
         self.nixosModules.stylix
         self.nixosModules.general
+
+        inputs.disko.nixosModules.disko
+        self.Configurations
       ];
 
       networking = {
