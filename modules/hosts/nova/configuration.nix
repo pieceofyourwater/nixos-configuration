@@ -10,7 +10,6 @@
     nixosModules.hostNova = { pkgs, ... }: {
       imports = [
         inputs.disko.nixosModules.disko
-        self.diskoConfigurations.hostNova
 
         self.nixosModules.home-manager
         self.nixosModules.hardware-configuration
@@ -21,6 +20,7 @@
         self.nixosModules.stylix
         self.nixosModules.general
       ];
+      disko.devices = self.diskoConfigurations.hostNova;
 
       networking = {
         hostName = "nova";
