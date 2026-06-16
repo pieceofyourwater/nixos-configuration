@@ -1,7 +1,7 @@
 { inputs, self, ... }: {
 
 
-  flake.lib = {
+  flake.lib.nvfConfig = {
     vim = { lib, ... }: {
       theme = {
         enable = true;
