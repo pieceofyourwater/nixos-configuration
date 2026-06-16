@@ -1,11 +1,13 @@
 { inputs, self, ... }:
 {
   flake = {
-    nixosConfigurations.nova = inputs.nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nova = { pkgs, ... }: inputs.nixpkgs.lib.nixosSystem {
+      inherit pkgs;
       modules = [
         self.nixosModules.hostNova
       ];
     };
+
     nixosModules.hostNova = { pkgs, ... }: {
       imports = [
         inputs.disko.nixosModules.disko
