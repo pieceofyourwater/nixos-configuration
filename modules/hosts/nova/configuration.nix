@@ -9,10 +9,10 @@
 
     nixosModules.hostNova = { pkgs, ... }: {
       imports = [
+        self.nixosModules.hardware-configuration
         self.diskoConfigurations.nova
 
         self.nixosModules.home-manager
-        self.nixosModules.hardware-configuration
         self.nixosModules.desktop
         self.nixosModules.gaming
         self.nixosModules.virtualization
