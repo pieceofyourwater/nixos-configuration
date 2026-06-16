@@ -14,6 +14,7 @@
 
         self.nixosModules.home-manager
         self.nixosModules.hardwareConfiguration
+        self.nixosModules.desktop
         self.nixosModules.gaming
         self.nixosModules.bluetooth
         self.nixosModules.stylix

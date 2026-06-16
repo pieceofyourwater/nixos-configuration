@@ -1,6 +1,5 @@
 { inputs, self, ... }: {
 
-
   flake.lib.nvfConfig = {
     vim = { lib, ... }: {
       theme = {
@@ -93,19 +92,13 @@
       autopairs.nvim-autopairs.enable = true;
     };
   };
-  perSystem = { pkgs, ...}: {
-    packages.neovim = (inputs.nvf.lib.neovimConfiguration {
-      inherit pkgs;
-      modules = [ self.lib.vim ];
-    });
+  perSystem = { pkgs, ... }: {
+    packages.neovim = (
+      inputs.nvf.lib.neovimConfiguration {
+        inherit pkgs;
+        modules = [ self.lib.vim ];
+      }
+    );
   };
-
-
-
-
-
-
-
-
 
 }

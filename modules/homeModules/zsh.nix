@@ -27,5 +27,5 @@
       oh-my-zsh.enable = true;
     };
     programs.zoxide.enable = true;
-  }; 
+  };
 }
