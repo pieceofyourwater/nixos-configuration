@@ -9,7 +9,7 @@
 
     nixosModules.hostNova = { pkgs, ... }: {
       imports = [
-        inputs.disko.nixosModules.disko
+        self.diskoConfigurations.nova
 
         self.nixosModules.home-manager
         self.nixosModules.hardware-configuration
