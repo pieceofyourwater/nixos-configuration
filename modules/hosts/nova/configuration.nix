@@ -9,11 +9,15 @@
     };
     nixosModules.hostNova = { pkgs, ... }: {
       imports = [
-        self.nixosModules.hardwareConfiguration
-
-        # Disko
         inputs.disko.nixosModules.disko
         self.diskoConfigurations.hostNova
+
+        self.nixosModules.home-manager
+        self.nixosModules.hardwareConfiguration
+        self.nixosModules.gaming
+        self.nixosModules.bluetooth
+        self.nixosModules.stylix
+        self.nixosModules.general
       ];
 
       networking = {
@@ -57,12 +61,10 @@
         memoryPercent = 50;
       };
 
-      nix.settings = {
-        experimental-features = [
-          "nix-command"
-          "flakes"
-        ];
-      };
+      nix.settings.experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
 
     };
   };
