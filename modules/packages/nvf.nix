@@ -1,7 +1,7 @@
 { inputs, self, ... }: {
 
-  flake.lib.nvfConfig = {
-    vim = { lib, ... }: {
+  flake.lib.nvfConfig = { lib, ... }: {
+    vim = {
       theme = {
         enable = true;
         name = "onedark";
@@ -96,7 +96,7 @@
     packages.neovim = (
       inputs.nvf.lib.neovimConfiguration {
         inherit pkgs;
-        modules = [ self.lib.vim ];
+        modules = [ self.lib.nvfConfig ];
       }
     );
   };
