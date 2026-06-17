@@ -1,7 +1,7 @@
 { self, ... }: {
   flake.homeModules.development = { pkgs, ... }: {
     home.packages = [
-      self.packages.${pkgs.system}.neovim
+      self.packages.${pkgs.stdenv.hostPlatform.system}.neovim
       pkgs.lazygit
       pkgs.tmux
       pkgs.git

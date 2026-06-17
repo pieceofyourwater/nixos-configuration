@@ -93,7 +93,8 @@
     };
   };
   perSystem = { pkgs, ... }: {
-    packages.neovim = (inputs.nvf.lib.neovimConfiguration {
+    packages.neovim =
+      (inputs.nvf.lib.neovimConfiguration {
         inherit pkgs;
         modules = [ self.lib.nvfConfig ];
       }).neovim;

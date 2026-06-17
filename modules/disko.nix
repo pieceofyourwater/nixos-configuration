@@ -1,8 +1,6 @@
 { inputs, self, ... }:
-{
-  flake.diskoConfigurations.default = self.diskoConfigurations.hostNova;
-
-  flake.diskoConfigurations.hostNova = {
+let
+  hostNova = {
     disko = {
       devices = {
         disk = {
@@ -69,4 +67,8 @@
       };
     };
   };
+in
+{
+  flake.diskoConfigurations.default = hostNova;
+  flake.diskoConfigurations.hostNova = hostNova;
 }

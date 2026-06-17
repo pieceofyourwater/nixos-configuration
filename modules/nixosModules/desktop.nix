@@ -1,13 +1,13 @@
 { ... }: {
   flake.nixosModules.desktop = { pkgs, ... }: {
+    services.libinput = {
+      enable = true;
+      touchpad.naturalScrolling = true;
+      touchpad.tapping = true;
+    };
+
     services.xserver = {
       enable = true;
-
-      libinput = {
-        enable = true;
-        touchpad.naturalScrolling = true;
-        touchpad.tapping = true;
-      };
 
       windowManager.xmonad = {
         enable = true;
