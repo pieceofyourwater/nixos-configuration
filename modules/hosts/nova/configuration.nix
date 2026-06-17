@@ -22,6 +22,8 @@
         self.diskoConfigurations.nova
       ];
 
+      nixpkgs.hostPlatform = { system = "x86_64-linux"; };
+
       networking = {
         hostName = "nova";
         networkmanager.enable = true;
