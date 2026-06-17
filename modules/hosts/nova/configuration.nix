@@ -41,6 +41,7 @@
 
       users.users.kyle = {
         isNormalUser = true;
+        initialPassword = "nixos";
         shell = "/etc/profiles/per-user/kyle/bin/zsh";
         extraGroups = [
           "wheel"
