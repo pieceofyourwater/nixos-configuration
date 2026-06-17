@@ -17,6 +17,11 @@
 
     stylix.url = "github:nix-community/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Non-flake:
+
+    dotfiles.url = "github:ELCL80/dotfiles";
+    dotfiles.flake = false;
   };
 
   outputs = inputs@{ flake-parts, ... }:

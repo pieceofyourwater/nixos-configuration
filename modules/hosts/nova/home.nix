@@ -28,7 +28,7 @@
 
       home = {
         username = "kyle";
-        homeDirectory = "/home/kyle/";
+        homeDirectory = "/home/kyle";
         stateVersion = "26.05";
         packages = [
           pkgs.gimp
