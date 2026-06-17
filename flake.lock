@@ -88,6 +88,22 @@
         "type": "github"
       }
     },
+    "dotfiles": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1779294743,
+        "narHash": "sha256-bWAJwpv0LbtFlfUQWBc/9HoRBpYYM0kiOjlEghUtkl8=",
+        "owner": "ELCL80",
+        "repo": "dotfiles",
+        "rev": "0de511d0a770141819d8e7740047d62ca9c516b6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ELCL80",
+        "repo": "dotfiles",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -369,6 +385,7 @@
     "root": {
       "inputs": {
         "disko": "disko",
+        "dotfiles": "dotfiles",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "import-tree": "import-tree",

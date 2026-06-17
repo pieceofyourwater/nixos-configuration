@@ -22,6 +22,8 @@
         self.diskoConfigurations.hostNova
       ];
 
+      nixpkgs.config.allowUnfree = true;
+
       networking = {
         hostName = "nova";
         networkmanager.enable = true;
@@ -67,6 +69,8 @@
         "nix-command"
         "flakes"
       ];
+
+      system.stateVersion = "26.05";
 
     };
   };
