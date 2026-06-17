@@ -1,11 +1,10 @@
 { ... }: {
-  flake.homeModules.vscode = {
+  flake.homeModules.vscode = { lib, ... }: {
     programs.vscode = {
       enable = true;
       userSettings = {
         # --- Code Editor Font ---
-        "editor.fontFamily" =
-          "'JetBrainsMono Nerd Font', 'JetBrains Mono', Consolas, 'Courier New', monospace";
+        "editor.fontFamily" = lib.mkForce "'JetBrainsMono Nerd Font', 'JetBrains Mono', Consolas, 'Courier New', monospace";
         "editor.fontLigatures" = true; # JetBrains Mono looks amazing with ligatures enabled
         "editor.fontSize" = 14; # Adjust to your liking
 
