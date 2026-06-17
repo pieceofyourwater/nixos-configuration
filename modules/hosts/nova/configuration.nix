@@ -18,8 +18,8 @@
         self.nixosModules.stylix
         self.nixosModules.general
 
-        inputs.disko.nixosModules.disko
-        self.Configurations
+        inputs.disko.nixosModules.nova
+        self.diskoConfigurations.nova
       ];
 
       networking = {
