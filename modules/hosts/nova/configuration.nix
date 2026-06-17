@@ -18,11 +18,9 @@
         self.nixosModules.stylix
         self.nixosModules.general
 
-        inputs.disko.nixosModules.nova
-        self.diskoConfigurations.nova
+        inputs.disko.nixosModules.disko
+        self.diskoConfigurations.hostNova
       ];
-
-      nixpkgs.hostPlatform = { system = "x86_64-linux"; };
 
       networking = {
         hostName = "nova";
