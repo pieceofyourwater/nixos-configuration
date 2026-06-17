@@ -6,7 +6,7 @@
       pkgs.fzf
     ];
 
-    home.file."p10k.zsh".source = "${inputs.dotfiles}/.p10k.zsh";
+    home.file.".p10k.zsh".source = "${inputs.dotfiles}/.p10k.zsh";
     home.sessionPath = [
       "$HOME/.local/bin/"
     ];
