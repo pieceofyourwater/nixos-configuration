@@ -5,8 +5,6 @@
 
       settings = {
         main = {
-          # This acts as an alpha multiplier for your Stylix moonlight background
-          alpha = "0.85"; 
         };
 
         # Foot delegates window-level blur to your desktop compositor (Mutter/GNOME or Hyprland)
@@ -20,5 +18,6 @@
         };
       };
     };
+    stylix.opacity.terminal = 0.8;
   };
 }

@@ -21,17 +21,17 @@
     ];
 
     environment.gnome.excludePackages = with pkgs; [
-      gnome-tour         
-      gnome-connections  
-      epiphany           
-      geary              
-      totem              
-      seahorse           
-      gnome-maps         
-      gnome-clocks       
-      gnome-contacts     
-      gnome-music        
-      simple-scan        
+      gnome-tour
+      gnome-connections
+      epiphany
+      geary
+      totem
+      seahorse
+      gnome-maps
+      gnome-clocks
+      gnome-contacts
+      gnome-music
+      simple-scan
       adwaita-icon-theme
     ];
 

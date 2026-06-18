@@ -6,8 +6,8 @@
         # --- Code Editor Font ---
         "editor.fontFamily" =
           lib.mkForce "'JetBrainsMono Nerd Font', 'JetBrains Mono', Consolas, 'Courier New', monospace";
-        "editor.fontLigatures" = lib.mkForce true; 
-        "editor.fontSize" = lib.mkForce 14; 
+        "editor.fontLigatures" = lib.mkForce true;
+        "editor.fontSize" = lib.mkForce 14;
 
         # --- Integrated Terminal Font ---
         "terminal.integrated.fontFamily" = lib.mkForce "'JetBrainsMono Nerd Font'";
