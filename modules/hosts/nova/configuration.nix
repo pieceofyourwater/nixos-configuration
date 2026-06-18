@@ -20,6 +20,8 @@
 
         inputs.disko.nixosModules.disko
         self.diskoConfigurations.hostNova
+
+        "${inputs.nixos-hardware}/common/cpu/intel/alder-lake"
       ];
 
       nixpkgs.config.allowUnfree = true;

@@ -6,29 +6,30 @@
       touchpad.tapping = true;
     };
 
-    services.xserver = {
-      enable = true;
+    services.xserver.enable = true;
+    services.xserver.displayManager.gdm.enable = true;
+    services.xserver.desktopManager.gnome.enable = true;
 
-      windowManager.xmonad = {
-        enable = true;
-        enableContribAndExtras = true;
-      };
-    };
-    services.displayManager.ly.enable = true;
-
-    services.xserver.config = ''
-      Section "InputClass"
-          Identifier "Disable ELAN Touchscreen"
-          MatchIsTouchscreen "on"
-          Option "Ignore" "on"
-      EndSection
+    services.udev.extraRules = ''
+      # Disable ELAN Touchscreen by matching its device attribute
+      SUBSYSTEM=="input", ATTRS{name}=="*ELAN*", ENV{LIBINPUT_IGNORE_DEVICE}="1"
     '';
 
     environment.systemPackages = [
-      pkgs.dmenu
-      pkgs.xmobar
-      pkgs.nitrogen
-      pkgs.xclip
+    ];
+
+    environment.gnome.excludePackages = with pkgs; [
+      gnome-tour         
+      gnome-connections  
+      epiphany           
+      geary              
+      totem              
+      seahorse           
+      gnome-maps         
+      gnome-clocks       
+      gnome-contacts     
+      gnome-music        
+      simple-scan        
     ];
   };
 }
