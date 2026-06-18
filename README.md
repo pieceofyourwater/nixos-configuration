@@ -4,6 +4,7 @@ This is my personal [NixOS](https://nixos.org/) configuration.
 My config is structured using the [Dendritic Pattern](https://github.com/mightyiam/dendritic), which is powered mainly by [flake-parts](https://flake.parts/).
 
 ## Structure ##
+Flake:
 
 ```mermaid
 graph TD
@@ -36,6 +37,7 @@ graph TD
     PKG --> x86[x86_64-linux]
     x86 --> nvim[neovim: package nvf-with-helpers]
 ```
+Files:
 
 ```mermaid
 graph TD
