@@ -9,6 +9,7 @@
     services.xserver.enable = true;
     services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
+    services.xserver.excludePackages = [ pkgs.xterm ];
 
     services.udev.extraRules = ''
       # Disable ELAN Touchscreen by matching its device attribute
@@ -31,6 +32,7 @@
       gnome-music        
       simple-scan        
     ];
-    services.xserver.excludePackages = [ pkgs.xterm ];
+
+    programs.firefox.enable = true;
   };
 }
