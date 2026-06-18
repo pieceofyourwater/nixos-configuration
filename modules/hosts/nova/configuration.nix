@@ -9,8 +9,8 @@
 
     nixosModules.hostNova = { pkgs, ... }: {
       imports = [
-        self.nixosModules.hardware-configuration
-        self.nixosModules.home-manager
+        self.nixosModules.hardwareNova
+        self.nixosModules.homeKyle
         self.nixosModules.desktop
         self.nixosModules.gaming
         self.nixosModules.virtualization
@@ -72,7 +72,6 @@
       ];
 
       system.stateVersion = "26.05";
-
     };
   };
 }
