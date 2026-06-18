@@ -17,6 +17,7 @@
     '';
 
     environment.systemPackages = [
+      pkgs.gnomeExtensions.blur-my-shell
     ];
 
     environment.gnome.excludePackages = with pkgs; [
@@ -31,6 +32,7 @@
       gnome-contacts     
       gnome-music        
       simple-scan        
+      adwaita-icon-theme
     ];
 
     programs.firefox.enable = true;
