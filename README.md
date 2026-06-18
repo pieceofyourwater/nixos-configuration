@@ -4,55 +4,68 @@ This is my personal [NixOS](https://nixos.org/) configuration.
 My config is structured using the [Dendritic Pattern](https://github.com/mightyiam/dendritic), which is powered mainly by [flake-parts](https://flake.parts/).
 
 ## Structure ##
-Flake:
 
-├───diskoConfigurations 
-│   └──hostNova: Disko module
-├───homeConfigurations 
-│   └──home-manager: Home Manager configuration
-├───homeModules 
-│   ├──vscode: Home Manager module
-│   ├──zsh: Home Manager module
-│   └──development: Home Manager module
-├───nixosConfigurations
-│   └───nova: NixOS configuration
-├───nixosModules
-│   ├───bluetooth: NixOS module
-│   ├───desktop: NixOS module
-│   ├───gaming: NixOS module
-│   ├───general: NixOS module
-│   ├───hardwareNova: NixOS module
-│   ├───homeKyle: NixOS module (home-manager)
-│   ├───hostNova: NixOS module
-│   ├───stylix: NixOS module
-│   └───virtualization: NixOS module
-└───packages
-    └───x86_64-linux
-        └───neovim: package 'nvf-with-helpers'
+```mermaid
+graph TD
+    Flake[Flake] --> DC[diskoConfigurations]
+    DC --> hostNova[hostNova: Disko module]
 
+    Flake --> HC[homeConfigurations]
+    HC --> hm[home-manager: Home Manager configuration]
 
-Files:
+    Flake --> HM[homeModules]
+    HM --> vscode[vscode: Home Manager module]
+    HM --> zsh[zsh: Home Manager module]
+    HM --> dev[development: Home Manager module]
 
-├── flake.lock
-├── flake.nix
-├── modules
-│   ├── disko.nix
-│   ├── homeModules
-│   │   ├── development.nix
-│   │   ├── vscode.nix
-│   │   └── zsh.nix
-│   ├── hosts
-│   │   └── nova
-│   │       ├── configuration.nix
-│   │       ├── hardware-configuration.nix
-│   │       └── home.nix
-│   ├── nixosModules
-│   │   ├── bluetooth.nix
-│   │   ├── desktop.nix
-│   │   ├── gaming.nix
-│   │   ├── general.nix
-│   │   ├── stylix.nix
-│   │   └── virtualization.nix
-│   └── packages
-│       └── nvf.nix
-└── README.md
+    Flake --> NC[nixosConfigurations]
+    NC --> nova[nova: NixOS configuration]
+
+    Flake --> NM[nixosModules]
+    NM --> blue[bluetooth: NixOS module]
+    NM --> desk[desktop: NixOS module]
+    NM --> game[gaming: NixOS module]
+    NM --> gen[general: NixOS module]
+    NM --> hwNova[hardwareNova: NixOS module]
+    NM --> hKyle[homeKyle: NixOS module home-manager]
+    NM --> hstNova[hostNova: NixOS module]
+    NM --> stylix[stylix: NixOS module]
+    NM --> virt[virtualization: NixOS module]
+
+    Flake --> PKG[packages]
+    PKG --> x86[x86_64-linux]
+    x86 --> nvim[neovim: package nvf-with-helpers]
+```
+
+```mermaid
+graph TD
+    Root[Project Root] --> flock[flake.lock]
+    Root --> fnix[flake.nix]
+    Root --> readme[README.md]
+    Root --> MOD[modules]
+
+    MOD --> disko[disko.nix]
+    
+    MOD --> HM[homeModules]
+    HM --> dev[development.nix]
+    HM --> vsc[vscode.nix]
+    HM --> zsh[zsh.nix]
+
+    MOD --> HOSTS[hosts]
+    HOSTS --> NOVA[nova]
+    NOVA --> config[configuration.nix]
+    NOVA --> hw[hardware-configuration.nix]
+    NOVA --> home[home.nix]
+
+    MOD --> NM[nixosModules]
+    NM --> blue[bluetooth.nix]
+    NM --> desk[desktop.nix]
+    NM --> game[gaming.nix]
+    NM --> gen[general.nix]
+    NM --> stylix[stylix.nix]
+    NM --> virt[virtualization.nix]
+
+    MOD --> PKGS[packages]
+    PKGS --> nvf[nvf.nix]
+```
+
