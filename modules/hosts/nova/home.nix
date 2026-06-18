@@ -19,6 +19,7 @@
         self.homeModules.vscode
         self.homeModules.zsh
         self.homeModules.development
+        self.homeModules.foot
       ];
 
       home = {
