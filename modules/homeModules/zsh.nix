@@ -15,7 +15,7 @@
       initContent = "source ~/.p10k.zsh";
       shellAliases = {
         cd = "z";
-        rebuild = "sudo nixos-rebuild switch";
+        rebuild = "sudo nixos-rebuild switch --flake ~/.config/nixos#nova";
       };
       plugins = [
         {
