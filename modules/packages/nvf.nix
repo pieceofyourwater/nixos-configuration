@@ -4,7 +4,7 @@
     config.vim = {
       theme = {
         enable = true;
-        name = "onedark";
+        name = "moonlight";
         style = "dark";
         transparent = true;
       };
