@@ -4,7 +4,7 @@
     config.vim = {
       theme = {
         enable = true;
-        name = "moonlight";
+        name = "nord";
         style = "dark";
         transparent = true;
       };
@@ -71,7 +71,7 @@
 
       statusline.lualine = {
         enable = true;
-        theme = "onedark";
+        theme = "nord";
       };
 
       terminal.toggleterm = {

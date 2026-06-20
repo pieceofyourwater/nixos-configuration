@@ -21,6 +21,8 @@
     stylix.url = "github:nix-community/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
 
+    areofyl-fetch.url = "github:areofyl/fetch";
+
     # Non-flake:
 
     dotfiles.url = "github:ELCL80/dotfiles";
