@@ -20,6 +20,7 @@
         self.homeModules.zsh
         self.homeModules.development
         self.homeModules.foot
+        self.homeModules.zen
       ];
 
       home = {

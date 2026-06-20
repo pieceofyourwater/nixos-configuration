@@ -99,5 +99,4 @@
         modules = [ self.lib.nvfConfig ];
       }).neovim;
   };
-
 }

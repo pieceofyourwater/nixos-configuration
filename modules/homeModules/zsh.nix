@@ -16,6 +16,7 @@
       shellAliases = {
         cd = "z";
         rebuild = "sudo nixos-rebuild switch --flake ~/.config/nixos#nova";
+        zen-browser = "zen-twilight";
       };
       plugins = [
         {
