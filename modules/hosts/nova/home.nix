@@ -30,6 +30,8 @@
         packages = [
           pkgs.gimp
           pkgs.libreoffice-fresh
+          pkgs.qbittorrent
+          pkgs.dolphin-emu
         ];
       };
     };
