@@ -17,6 +17,7 @@
         self.nixosModules.bluetooth
         self.nixosModules.stylix
         self.nixosModules.general
+        self.nixosModules.wine
 
         inputs.disko.nixosModules.disko
         self.diskoConfigurations.hostNova
