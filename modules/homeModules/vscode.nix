@@ -6,6 +6,7 @@
       mutableExtensionsDir = false;
       profiles.default.extensions = with pkgs.vscode-extensions; [
         vscodevim.vim
+        github.codespaces
       ];
       profiles.default.userSettings = {
         # --- Code Editor Font ---
