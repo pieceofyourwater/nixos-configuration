@@ -29,6 +29,7 @@
         stateVersion = "26.05";
         packages = [
           pkgs.gimp
+          pkgs.libreoffice-fresh
         ];
       };
     };
