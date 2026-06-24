@@ -30,6 +30,9 @@
 
     areofyl-fetch.url = "github:areofyl/fetch";
 
+    lsfg-vk-flake.url = "github:pabloaul/lsfg-vk-flake/main";
+    lsfg-vk-flake.inputs.nixpkgs.follows = "nixpkgs";
+
     # Non-flake:
 
     dotfiles.url = "github:ELCL80/dotfiles";
