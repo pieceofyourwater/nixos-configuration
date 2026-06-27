@@ -33,10 +33,17 @@
     lsfg-vk-flake.url = "github:pabloaul/lsfg-vk-flake/main";
     lsfg-vk-flake.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Non-flake:
+    mangowc.url = "github:mangowm/mango";
+    mangowc.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Non-flake:
     dotfiles.url = "github:ELCL80/dotfiles";
     dotfiles.flake = false;
+
+    # Non-Nix
+    non-nix.url = ./non-nix;
+    non-nix.flake = false;
+
   };
 
   outputs = inputs@{ flake-parts, ... }:

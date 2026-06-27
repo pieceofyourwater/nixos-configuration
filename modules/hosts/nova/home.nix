@@ -21,6 +21,8 @@
         self.homeModules.development
         self.homeModules.foot
         self.homeModules.zen
+        self.homeModules.mangowc
+        self.homeModules.waylandWmUtils
       ];
 
       home = {
