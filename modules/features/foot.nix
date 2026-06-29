@@ -7,7 +7,7 @@
         main = {
         };
         scrollback = {
-          lines = 0; 
+          lines = 1000; 
         };
 
         mouse = {

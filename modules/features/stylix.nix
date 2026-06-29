@@ -7,7 +7,7 @@
     stylix = {
       enable = true;
       polarity = "dark";
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/moonlight.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
 
       fonts = {
         monospace = {

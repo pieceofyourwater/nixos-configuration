@@ -2,6 +2,7 @@
   flake.nixosModules.desktop = { ... }: {
     imports = [
       self.nixosModules.kde
+      self.nixosModules.mangowc
     ];
 
     services.libinput = {
@@ -27,6 +28,14 @@
       slurp
     ];
   };
+  flake.nixosModules.mangowc = { ... }: {
+    imports = [
+      inputs.mangowc.nixosModules.mango
+    ];
+
+    programs.mango.enable = true;
+    programs.mango.addLoginEntry = true;
+  };
 
   flake.homeModules.mangowc = { ... }: {
     imports = [
@@ -35,7 +44,6 @@
 
     wayland.windowManager.mango = {
       enable = true;
-          # Main configuration as Nix attributes
       settings = {
         blur = 1;
         blur_optimized = 1;
@@ -49,9 +57,9 @@
         # Animations - use underscores for multi-part keys
         animations = 1;
         animation_type_open = "slide";
-        animation_type_close = "slide";
-        animation_duration_open = 400;
-        animation_duration_close = 800;
+        animation_type_close = "zoom";
+        animation_duration_open = 100;
+        animation_duration_close = 200;
 
         # Or use nested attrs (will be flattened with underscores)
         animation_curve = {
@@ -61,7 +69,7 @@
 
         # Use lists for duplicate keys like bind and tagrule
         bind = [
-          "SUPER,R,reload_config"
+          "SUPER+SHIFT,r,reload_config"
           "SUPER,space,spawn,wmenu-run -l 10"
           "SUPER,t,spawn,foot"
           "SUPER,r,setkeymode,resize"  
@@ -72,6 +80,16 @@
           "SUPER,h,focusdir,left"
           "SUPER,l,focusdir,right"
 
+          
+          "SUPER,1,comboview,1"
+          "SUPER,2,comboview,2"
+          "SUPER,3,comboview,3"
+          "SUPER,4,comboview,4"
+          "SUPER,5,comboview,5"
+          "SUPER,6,comboview,6"
+          "SUPER,7,comboview,7"
+          "SUPER,8,comboview,8"
+          "SUPER,9,comboview,9"
         ];
 
         tagrule = [
@@ -92,6 +110,14 @@
       extraConfig = ''
         mousebind=SUPER,btn_left,moveresize,curmove
         mousebind=SUPER,btn_right,moveresize,curresize
+
+        gappih=0
+        gappiv=0
+        gappoh=0
+        gappov=0
+        borderpx=1
+        focuscolor=0x191f28ff
+        no_border_when_single=0 
       '';
       autostart_sh = ''
         swaybg -i ${inputs.non-nix}/walls/moonlight-tree.png
